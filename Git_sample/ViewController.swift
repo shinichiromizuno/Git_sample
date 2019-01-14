@@ -9,29 +9,27 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        let textLabel = UILabel(frame: CGRectMake(0, 0, 300, 100))
+        let textLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 100))
         textLabel.layer.position = CGPoint(x: self.view.bounds.width / 2, y: self.view.bounds.height / 2)
-        textLabel.backgroundColor = UIColor.redColor()
-        textLabel.text = "Hello World!"
-        textLabel.font = UIFont.systemFontOfSize(40)
-        textLabel.textColor = UIColor.whiteColor()
-        textLabel.shadowColor = UIColor.blueColor()
-        textLabel.textAlignment = NSTextAlignment.Center
+        textLabel.backgroundColor = UIColor.red
+        textLabel.text = "TECH::CAMP"
+        textLabel.font = UIFont.systemFont(ofSize: 40)
+        textLabel.textColor = UIColor.white
+        textLabel.shadowColor = UIColor.blue
+        textLabel.textAlignment = NSTextAlignment.center
         textLabel.layer.masksToBounds = true
         textLabel.layer.cornerRadius = 20.0
         self.view.addSubview(textLabel)
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
 }
-
