@@ -14,6 +14,16 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        let textLabel = makeTextLable()
+        self.view.addSubview(textLabel)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func makeTextLable() -> UILabel {
         let textLabel = UILabel(frame: CGRect(x: 0, y: 0, width: 300, height: 100))
         textLabel.layer.position = CGPoint(x: self.view.bounds.width / 2, y: self.view.bounds.height / 2)
         textLabel.backgroundColor = UIColor.red
@@ -24,12 +34,7 @@ class ViewController: UIViewController {
         textLabel.textAlignment = NSTextAlignment.center
         textLabel.layer.masksToBounds = true
         textLabel.layer.cornerRadius = 20.0
-        self.view.addSubview(textLabel)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        return textLabel
     }
     
 }
